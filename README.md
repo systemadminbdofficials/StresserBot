@@ -75,10 +75,9 @@ Connect to Panel:
 
 Bash
 telnet 127.0.0.1 3778
+
 ⚠️ Disclaimer
 This project is for educational and research purposes only. The author is not responsible for any misuse. Use only on authorized systems.
-
-
 
 1. Autonomous Scanning
 Target Discovery: The bot binaries contain scanning modules (e.g., gpon80_scanner.c, realtek.c) that automatically generate random IPv4 addresses to scan.
